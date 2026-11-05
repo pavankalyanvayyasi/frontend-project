@@ -1,51 +1,81 @@
-# Tech.Care – Healthcare Dashboard
+#  Tech.Care – Healthcare Dashboard
 
-## Project Overview
+![Tech.Care Healthcare Dashboard](assets/dashboard-preview.png)
 
-Tech.Care Healthcare Dashboard is a frontend web application designed to display patient healthcare information through a clean and user-friendly dashboard interface.
+##  Project Overview
 
-The application integrates healthcare information from an external API and presents patient details in an organized format.
+Tech.Care Healthcare Dashboard is a web-based frontend application designed to provide an organized and user-friendly interface for displaying patient healthcare information.
 
-## Features
+The dashboard presents patient profiles, diagnosis history, vital signs, and laboratory results in a structured visual format.
 
-- Interactive healthcare dashboard.
-- Patient information display.
-- External API integration.
-- Data visualization using Chart.js.
-- Responsive frontend interface.
-- Organized healthcare information.
+It integrates external API data to display healthcare information and uses charts to make medical data easier to understand.
 
-## Technologies Used
+##  Features
 
-- HTML5
-- CSS3
-- JavaScript
-- Chart.js
-- REST API
+- **Patient Management:** Displays a list of patient profiles.
+- **Patient Information:** Shows individual patient details.
+- **Diagnosis History:** Visualizes patient blood pressure history.
+- **Vital Signs:** Displays respiratory rate, temperature, and heart rate.
+- **Lab Results:** Provides access to laboratory information.
+- **API Integration:** Fetches patient information from an external API.
+- **Data Visualization:** Uses Chart.js for graphical representation.
+- **User-Friendly Interface:** Clean and organized dashboard layout.
 
-## Project Structure
+##  Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| HTML5 | Webpage structure |
+| CSS3 | Styling and layout |
+| JavaScript | Dynamic functionality |
+| REST API | Fetching patient information |
+| Chart.js | Data visualization |
+| Git | Version control |
+| GitHub | Source code hosting |
+
+##  Project Structure
 
 ```text
 frontend-project/
+│
 ├── assets/
+│   ├── data/
+│   ├── icons/
+│   ├── images/
+│   └── dashboard-preview.png
+│
 ├── css/
 │   └── style.css
+│
 ├── js/
+│
 ├── index.html
+│
 └── README.md
 ```
 
-## How to Run the Project
+##  How to Run the Project
 
-1. Clone the repository:
+### Prerequisites
+
+- Visual Studio Code
+- Python installed on your system
+- Web browser
+- Internet connection
+
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/pavankalyanvayyasi/frontend-project.git
 ```
 
-2. Open the project folder in VS Code.
+### Step 2: Open the Project
 
-3. Start a local server:
+Open the cloned project folder in Visual Studio Code.
+
+### Step 3: Start the Local Server
+
+Open the VS Code terminal and execute:
 
 ```bash
 python -m http.server 5500
@@ -57,23 +87,43 @@ On Windows, you can also use:
 py -m http.server 5500
 ```
 
-4. Open your browser and visit:
+### Step 4: Open in Browser
+
+Visit:
 
 ```text
 http://localhost:5500/
 ```
 
-## API Integration
+The Tech.Care Healthcare Dashboard will open in your browser.
 
-The dashboard retrieves patient information from the provided Coalition Technologies API.
+##  API Integration
+
+The application retrieves patient information from the provided Coalition Technologies API.
+
+JavaScript is used to fetch and display the API response in the dashboard.
 
 An active internet connection is required to retrieve API data and load Chart.js from its CDN.
 
-## GitHub Repository
+##  Project Screenshot
 
-https://github.com/pavankalyanvayyasi/frontend-project
+Here is a preview of the Tech.Care Healthcare Dashboard:
 
-## Author
+![Dashboard Preview](assets/dashboard-preview.png)
 
-Pavan Kalyan
+##  Project Objective
+
+The objective of this project is to develop a healthcare dashboard using frontend technologies and external API integration to display patient information and healthcare statistics in an organized visual interface.
+
+## 👨‍💻 Author
+
+**Pavan Kalyan**
+
+Computer Science Graduate
+
+##  GitHub Repository
+
+[Tech.Care Healthcare Dashboard](https://github.com/pavankalyanvayyasi/frontend-project)
+
+
 
