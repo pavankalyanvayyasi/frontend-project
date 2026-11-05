@@ -115,7 +115,7 @@ Here is a preview of the Tech.Care Healthcare Dashboard:
 
 The objective of this project is to develop a healthcare dashboard using frontend technologies and external API integration to display patient information and healthcare statistics in an organized visual interface.
 
-## 👨‍💻 Author
+## Author
 
 **Pavan Kalyan**
 
