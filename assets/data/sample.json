@@ -1,0 +1,9 @@
+{
+  "project": "Frontend Practice",
+  "tasks": {
+    "total": 250,
+    "completed": 175,
+    "pending": 75
+  },
+  "status": "Active"
+}

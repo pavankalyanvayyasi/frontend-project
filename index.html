@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech.Care Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/api.js" defer></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="brand">
+      <img src="assets/images/TestLogo.svg"
+           alt="Tech.Care" class="brand-logo">
+    </div>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#">
+        <img src="assets/images/home_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+        Overview
+      </a>
+      <a href="#" class="active" aria-current="page">
+        Patients
+      </a>
+      <a href="#">Schedule</a>
+      <a href="#">
+        <img src="assets/images/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg" alt="">
+        Message
+      </a>
+      <a href="#">Transactions</a>
+    </nav>
+
+    <div class="doctor-profile">
+      <div class="doctor-avatar">DS</div>
+      <div class="doctor-info">
+        <strong>Dr. Jose Simmons</strong>
+        <span>General Practitioner</span>
+      </div>
+      <span class="doctor-divider"></span>
+      <img class="header-icon"
+           src="assets/images/settings_FILL0_wght300_GRAD0_opsz24.svg"
+           alt="Settings">
+      <img class="header-icon"
+           src="assets/images/more_vert_FILL0_wght300_GRAD0_opsz24.svg"
+           alt="More">
+    </div>
+  </header>
+
+  <div class="dashboard">
+
+    <aside class="patients-panel">
+      <div class="section-heading">
+        <h2>Patients</h2>
+        <img src="assets/images/search_FILL0_wght300_GRAD0_opsz24.svg"
+             alt="Search" class="small-icon">
+      </div>
+
+      <div id="patientsList" class="patients-list">
+        <p>Loading patients...</p>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+
+      <section class="diagnosis-history">
+        <h2>Diagnosis History</h2>
+
+        <div class="blood-pressure-card">
+          <div class="blood-pressure-left">
+            <div class="chart-heading">
+              <h3>Blood Pressure</h3>
+              <span>Last 6 months ⌄</span>
+            </div>
+
+            <div class="chart-container">
+              <canvas id="bloodPressureChart"></canvas>
+            </div>
+          </div>
+
+          <div class="blood-pressure-right">
+            <div class="pressure-reading">
+              <div class="reading-label">
+                <span class="reading-dot systolic-dot"></span>
+                <strong>Systolic</strong>
+              </div>
+
+              <h3 id="systolicValue">—</h3>
+              <p class="reading-level">
+                ▲ <span id="systolicLevel">—</span>
+              </p>
+            </div>
+
+            <div class="pressure-divider"></div>
+
+            <div class="pressure-reading">
+              <div class="reading-label">
+                <span class="reading-dot diastolic-dot"></span>
+                <strong>Diastolic</strong>
+              </div>
+
+              <h3 id="diastolicValue">—</h3>
+              <p class="reading-level">
+                ▼ <span id="diastolicLevel">—</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vital-signs">
+
+        <div class="vital-card respiratory">
+          <div class="vital-icon">
+            <img src="assets/images/respiratory rate.svg"
+                 alt="Respiratory Rate">
+          </div>
+          <h3>Respiratory Rate</h3>
+          <div class="vital-value">
+            <strong>—</strong><span>bpm</span>
+          </div>
+          <span class="vital-status">—</span>
+        </div>
+
+        <div class="vital-card temperature">
+          <div class="vital-icon">
+            <img src="assets/images/temperature.svg"
+                 alt="Temperature">
+          </div>
+          <h3>Temperature</h3>
+          <div class="vital-value">
+            <strong>—</strong><span>°F</span>
+          </div>
+          <span class="vital-status">—</span>
+        </div>
+
+        <div class="vital-card heart">
+          <div class="vital-icon">
+            <img src="assets/images/HeartBPM.svg"
+                 alt="Heart Rate">
+          </div>
+          <h3>Heart Rate</h3>
+          <div class="vital-value">
+            <strong>—</strong><span>bpm</span>
+          </div>
+          <span class="vital-status">—</span>
+        </div>
+
+      </section>
+
+      <section class="diagnostic-list">
+        <h2>Diagnostic List</h2>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Problem/Diagnosis</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="3">Loading diagnoses...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <aside class="profile-panel">
+
+      <section class="patient-profile">
+        <div class="profile-header">
+          <img id="profileImage" src="" alt="" hidden>
+          <h2 id="profileName">Loading patient...</h2>
+        </div>
+
+        <div class="profile-details">
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <img src="assets/images/BirthIcon.svg" alt="">
+            </div>
+            <div>
+              <strong>Date of Birth</strong>
+              <span id="patientDob">—</span>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <img src="assets/images/FemaleIcon.svg" alt="">
+            </div>
+            <div>
+              <strong>Gender</strong>
+              <span id="patientGender">—</span>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <img src="assets/images/PhoneIcon.svg" alt="">
+            </div>
+            <div>
+              <strong>Contact Info</strong>
+              <span id="patientPhone">—</span>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <img src="assets/images/PhoneIcon.svg" alt="">
+            </div>
+            <div>
+              <strong>Emergency Contacts</strong>
+              <span id="patientEmergency">—</span>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <img src="assets/images/InsuranceIcon.svg" alt="">
+            </div>
+            <div>
+              <strong>Insurance Provider</strong>
+              <span id="patientInsurance">—</span>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="profile-button" type="button">
+          Show All Information
+        </button>
+      </section>
+
+      <section class="lab-results">
+        <h2>Lab Results</h2>
+        <div id="labResultsList">
+          <p>Loading lab results...</p>
+        </div>
+      </section>
+
+    </aside>
+  </div>
+</body>
+</html>
