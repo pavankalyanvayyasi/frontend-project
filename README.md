@@ -1,16 +1,12 @@
-#  Tech.Care – Healthcare Dashboard
+# Tech.Care – Healthcare Dashboard
 
-![Tech.Care Healthcare Dashboard](assets/dashboard-preview.png)
-
-##  Project Overview
+## Project Overview
 
 Tech.Care Healthcare Dashboard is a web-based frontend application designed to provide an organized and user-friendly interface for displaying patient healthcare information.
 
-The dashboard presents patient profiles, diagnosis history, vital signs, and laboratory results in a structured visual format.
+The dashboard presents patient profiles, diagnosis history, vital signs, and laboratory results in a structured visual format. It integrates external API data and uses charts to make healthcare information easier to understand.
 
-It integrates external API data to display healthcare information and uses charts to make medical data easier to understand.
-
-##  Features
+## Features
 
 - **Patient Management:** Displays a list of patient profiles.
 - **Patient Information:** Shows individual patient details.
@@ -19,21 +15,19 @@ It integrates external API data to display healthcare information and uses chart
 - **Lab Results:** Provides access to laboratory information.
 - **API Integration:** Fetches patient information from an external API.
 - **Data Visualization:** Uses Chart.js for graphical representation.
-- **User-Friendly Interface:** Clean and organized dashboard layout.
+- **User-Friendly Interface:** Provides a clean and organized dashboard layout.
 
-##  Technologies Used
+## Technologies Used
 
-| Technology | Purpose |
-|---|---|
-| HTML5 | Webpage structure |
-| CSS3 | Styling and layout |
-| JavaScript | Dynamic functionality |
-| REST API | Fetching patient information |
-| Chart.js | Data visualization |
-| Git | Version control |
-| GitHub | Source code hosting |
+- HTML5
+- CSS3
+- JavaScript
+- REST API
+- Chart.js
+- Git
+- GitHub
 
-##  Project Structure
+## Project Structure
 
 ```text
 frontend-project/
@@ -54,7 +48,7 @@ frontend-project/
 └── README.md
 ```
 
-##  How to Run the Project
+## How to Run the Project
 
 ### Prerequisites
 
@@ -89,7 +83,7 @@ py -m http.server 5500
 
 ### Step 4: Open in Browser
 
-Visit:
+Open your browser and visit:
 
 ```text
 http://localhost:5500/
@@ -97,7 +91,7 @@ http://localhost:5500/
 
 The Tech.Care Healthcare Dashboard will open in your browser.
 
-##  API Integration
+## API Integration
 
 The application retrieves patient information from the provided Coalition Technologies API.
 
@@ -105,25 +99,6 @@ JavaScript is used to fetch and display the API response in the dashboard.
 
 An active internet connection is required to retrieve API data and load Chart.js from its CDN.
 
-##  Project Screenshot
+## Project Objective
 
-Here is a preview of the Tech.Care Healthcare Dashboard:
-
-![Dashboard Preview](assets/dashboard-preview.png)
-
-##  Project Objective
-
-The objective of this project is to develop a healthcare dashboard using frontend technologies and external API integration to display patient information and healthcare statistics in an organized visual interface.
-
-## Author
-
-**Pavan Kalyan**
-
-Computer Science Graduate
-
-##  GitHub Repository
-
-[Tech.Care Healthcare Dashboard](https://github.com/pavankalyanvayyasi/frontend-project)
-
-
-
+The objective of this project is to develop a healthcare dashboard using frontend technologies and external API integration to display patient information, diagnosis history, and healthcare statistics in an organized visual interface.
